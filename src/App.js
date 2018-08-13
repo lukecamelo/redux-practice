@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
 
 import './App.css'
 
 import Posts from './components/Posts'
 import PostForm from './components/PostForm'
 
-const store = createStore(() => [], {}, applyMiddleware())
+import store from './store'
 
 class App extends Component {
   render() {
