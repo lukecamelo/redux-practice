@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import { Provider } from 'react-redux'
-
-import './App.css'
+import store from './store'
 
 import Posts from './components/Posts'
 import PostForm from './components/PostForm'
 
-import store from './store'
+
+import logo from './logo.svg'
+import './App.css'
 
 class App extends Component {
   render() {
