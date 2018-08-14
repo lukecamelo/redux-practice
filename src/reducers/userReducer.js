@@ -1,8 +1,7 @@
 import { NEW_USER } from '../actions/types'
 
 const initialState = {
-  username: '',
-  password: ''
+  users: [],
 }
 
 export default (state = initialState, action) => {
@@ -10,8 +9,7 @@ export default (state = initialState, action) => {
     case NEW_USER:
       return {
         ...state,
-        username: action.payload.username,
-        password: action.payload.password
+        users: [...state.users, action.payload]
       }
     default:
       return state
