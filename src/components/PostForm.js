@@ -59,11 +59,6 @@ class PostForm extends Component {
   }
 }
 
-// const mapStateToProps = state => ({
-//   title: state.post.item,
-//   body: state.post.item
-// })
-
 PostForm.propTypes = {
   newPost: PropTypes.func.isRequired
 }
