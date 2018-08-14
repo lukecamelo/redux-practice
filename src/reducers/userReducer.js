@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
     case NEW_USER:
       return {
         ...state,
-        users: [...state.users, action.payload]
+        users: [...state.users, action.user]
       }
     default:
       return state
