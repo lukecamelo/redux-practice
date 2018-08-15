@@ -6,6 +6,7 @@ import store from './store'
 // import Posts from './components/Posts'
 // import PostForm from './components/PostForm'
 import UserForm from './components/UserForm'
+import UserList from './components/UserList'
 
 import logo from './logo.svg'
 import './App.css'
@@ -20,6 +21,7 @@ class App extends Component {
             <h1 className="App-title">Welcome to React</h1>
           </header>
           <UserForm />
+          <UserList/>
         </div>
       </Provider>
     )
