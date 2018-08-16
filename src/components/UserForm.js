@@ -14,11 +14,13 @@ class UserForm extends React.Component {
 
   onSubmit = e => {
     e.preventDefault()
+    const { username, password } = this.state
     const user = {
-      username: this.state.username,
-      password: this.state.password
+      username,
+      password
     }
     this.props.newUser(user)
+    this.setState({ username: '', password: '' })
   }
 
   render() {

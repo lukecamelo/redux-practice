@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 const UserList = ({ users }) => {
@@ -12,7 +12,7 @@ const UserList = ({ users }) => {
 
   return (
     <div>
-      <h1>hi!</h1>
+      <h1>List of users</h1>
       {list}
     </div>
   )
