@@ -1,7 +1,8 @@
-import { NEW_USER } from '../actions/types'
+import { NEW_USER, CHANGE_COLOR } from '../actions/types'
 
 const initialState = {
   users: [],
+  isGreen: false
 }
 
 export default (state = initialState, action) => {
@@ -10,6 +11,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         users: [...state.users, action.payload]
+      }
+    case CHANGE_COLOR:
+      return {
+        ...state,
+        isGreen: !state.isGreen
       }
     default:
       return state

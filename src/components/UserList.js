@@ -1,12 +1,16 @@
 import React from 'react'
+import {changeColor} from '../actions/userActions'
 import { connect } from 'react-redux'
 
-const UserList = ({ users }) => {
+import './UserList.css'
+
+const UserList = ({ users, changeColor }) => {
   let list = users.users.map((user, i) => (
-    <div key={i}>
+    <div className='user-item' key={i}>
       <h2>username: {user.username}</h2>
       <br />
       <h2>password: {user.password}</h2>
+      <button onClick={changeColor}>Change Color</button>
     </div>
   ))
 
@@ -22,4 +26,4 @@ const mapStateToProps = state => ({
   users: state.users
 })
 
-export default connect(mapStateToProps)(UserList)
+export default connect(mapStateToProps, { changeColor })(UserList)
