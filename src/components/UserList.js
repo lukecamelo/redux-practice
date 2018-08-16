@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 
 import './UserList.css'
 
-const UserList = ({ users, changeColor }) => {
+const UserList = ({ users, changeColor, isGreen }) => {
   let list = users.users.map((user, i) => (
-    <div className='user-item' key={i}>
+    <div className={isGreen ? 'user-item' : 'item-user'} key={i}>
       <h2>username: {user.username}</h2>
       <br />
       <h2>password: {user.password}</h2>
@@ -23,7 +23,8 @@ const UserList = ({ users, changeColor }) => {
 }
 
 const mapStateToProps = state => ({
-  users: state.users
+  users: state.users,
+  isGreen: state.users.isGreen
 })
 
 export default connect(mapStateToProps, { changeColor })(UserList)
